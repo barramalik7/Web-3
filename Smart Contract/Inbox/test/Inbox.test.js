@@ -16,9 +16,9 @@ beforeEach(async () => {
     inbox = await new web3.eth.Contract(abi)
     .deploy({
         data: evm.bytecode.object,
-        argument: ['Halo']
+        arguments: ['Halo']
     })
-    .send({from: accounts[0], gas: '1000000'};)
+    .send({from: accounts[0], gas: '1000000'});
 });
 
 describe('Inbox', () => {
